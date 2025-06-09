@@ -96,26 +96,47 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a style="color: orange;" class="navbar-brand" href="{{ route('site.home') }}">ETEC Zona Leste</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ route('site.home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('site.departamento') }}">Departamentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('site.curso') }}">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('site.contato') }}">Contato</a></li>
-                </ul>
-            </div>
+    <<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a style="color: orange;" class="navbar-brand" href="{{ route('site.home') }}">ETEC Zona Leste</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <!-- Links principais mais para a esquerda -->
+                <li class="nav-item"><a class="nav-link" href="{{ route('site.home') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('site.departamento') }}">Departamentos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('site.curso') }}">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('site.contato') }}">Contato</a></li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto">
+                @if (Route::has('login'))
+                    @auth
+                        <li class="nav-item">
+                            <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a href="{{ route('login') }}" class="nav-link">Login</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a href="{{ route('register') }}" class="nav-link">Register</a>
+                            </li>
+                        @endif
+                    @endauth
+                @endif
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Seção Hero com Imagem de Fundo -->
     <header class="hero">
+         
         <div class="container">
             <h1>Bem-vindo à ETEC Zona Leste</h1>
             <p>Educação de qualidade para seu futuro!</p>
@@ -138,7 +159,7 @@
             <img src="{{ asset('build/assets/images/etec02.jpg') }}" class="d-block w-100 img-fluid" alt="Slide 2">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('build/assets/images/etec03.jpg') }}" class="d-block w-100 img-fluid" alt="Slide 3">
+            <img src="{{ asset('build/assets/images/etec03.jpeg') }}" class="d-block w-100 img-fluid" alt="Slide 3">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

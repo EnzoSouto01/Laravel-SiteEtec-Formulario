@@ -109,9 +109,9 @@
 
             <!-- Contato Imaginário -->
             <div class="contact-info mb-5">
-                <p><strong>Telefone:</strong> (11) 1234-5678</p>
-                <p><strong>E-mail:</strong> contato@eteczonasleste.edu.br</p>
-                <p><strong>Endereço:</strong> Rua Exemplo, 123, Bairro Zona Leste, São Paulo - SP</p>
+                <p><strong>Telefone:</strong> (11) 2045-4000 / 2045-4016</p>
+                <p><strong>E-mail:</strong> e211acad@cps.sp.gov.br;</p>
+                <p><strong>Endereço:</strong> Avenida Águia de Haia, 2.633 - Cidade AE Carvalho - São Paulo/SP - CEP: 03694-000</p>
             </div>
 
             <p class="mb-4">Ou preencha o formulário abaixo para nos enviar uma mensagem:</p>

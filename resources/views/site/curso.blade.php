@@ -26,7 +26,7 @@
             padding: 20px 0;
             font-size: 1rem;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 100px;
         }
     </style>
 </head>
