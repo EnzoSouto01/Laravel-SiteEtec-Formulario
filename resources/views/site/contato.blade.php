@@ -117,7 +117,7 @@
             <p class="mb-4">Ou preencha o formulário abaixo para nos enviar uma mensagem:</p>
 
             <!-- Formulário de Contato -->
-            <form action="{{ route('site.contato') }}" method="POST">
+            <form action="{{ route('site.contato') }}" method="GET">
                 @csrf
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome</label>
@@ -126,6 +126,10 @@
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <input type="text" class="form-control" id="assunto" name="assunto" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Mensagem</label>

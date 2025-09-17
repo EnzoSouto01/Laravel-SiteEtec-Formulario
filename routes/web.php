@@ -26,4 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::fallback(function() {
+    echo 'Página não encontrada. <a href="'.route('site.home'),'">Clique aqui</a> para ir a página inicial';
+});
+
 require __DIR__.'/auth.php';
