@@ -12,11 +12,11 @@
 
 ## Código
 
-Web.php
+- Web.php
 <img width="912" height="690" alt="web" src="https://github.com/user-attachments/assets/7e923cad-8bdc-4cb9-9d4e-8a009db22b08" />
 
-ContatoController.php
+- ContatoController.php
 <img width="612" height="306" alt="contatoController" src="https://github.com/user-attachments/assets/bc339b03-23e2-4dde-b917-f9d167fa2de7" />
 
-contato.blade.php
+- contato.blade.php
 <img width="1094" height="957" alt="contatoBlade" src="https://github.com/user-attachments/assets/8d8043bc-14a7-4e50-bec6-a206332da1cc" />
